@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şifre Oluşturma</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <style>
+            .sifre{
+    width: 30%;
+    min-width: 320px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    margin: auto; 
+    border-radius: 8px;
+    padding: 5px;
+    background-color: white;
+
+}
+
+
+.sifre input{
+    border: none;
+    width: 80%;
+    padding: 5px;
+   
+    
+}
+
+.sifre input:focus{
+  outline: none;
+}
+
+h1{
+    color: #5f5e5e;
+    text-align: center;
+}
+
+.hero{
+
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: ghostwhite;
+}
+        </style>
+</head>
+
+<body>
+
+    <div class="hero">
+        <h1>Şifre Oluşturucu</h1>
+        <div class="sifre">
+            <input id="sifreinput" type="text" value="">
+            <a href="index.html"><i class="fa-solid fa-rotate-right"></i></a>
+        </div>
+    </div>
+
+    <script >
+        var buyukharf= "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+var kucukharf="abcdefghijklmnopqrstuvwxyz"
+var rakam="0123456789"
+var sembol="!@#$%^&*()_+[]{}|;:,.<>?"
+
+var r1=Math.floor(Math.random()*buyukharf.length)
+var r2=Math.floor(Math.random()*buyukharf.length)
+var r3=Math.floor(Math.random()*kucukharf.length)
+var r4=Math.floor(Math.random()*kucukharf.length)
+var r5=Math.floor(Math.random()*rakam.length)
+var r6=Math.floor(Math.random()*rakam.length)
+var r7=Math.floor(Math.random()*sembol.length)
+var r8=Math.floor(Math.random()*sembol.length)
+
+var k1=buyukharf[r1]
+var k2=buyukharf[r2]
+var k3=kucukharf[r3]
+var k4=kucukharf[r4]
+var k5=rakam[r5]
+var k6=rakam[r6]
+var k7=sembol[r7]
+var k8=sembol[r8]
+var sonuc=k1+k2+k3+k4+k5+k6+k7+k8
+
+
+document.getElementById("sifreinput").value=sonuc
+
+console.log(sonuc)
+    </script>
+</body>
+
+</html>
